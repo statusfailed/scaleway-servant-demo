@@ -112,13 +112,13 @@ instance ToJSON   Thread where
 instance FromJSON a => FromJSON (Page a) where
   parseJSON =
     genericParseJSON defaultOptions {
-      fieldLabelModifier = drop 3 . map toLower
+      fieldLabelModifier = drop 4 . map toLower
     }
 
 instance ToJSON a   => ToJSON   (Page a) where
   toJSON    =
     genericToJSON defaultOptions {
-      fieldLabelModifier = drop 3 . map toLower
+      fieldLabelModifier = drop 4 . map toLower
     }
 
 instance FromJSON IndexPage where
