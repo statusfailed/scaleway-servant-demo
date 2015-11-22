@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 1em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.index-page {
+  margin-top: 0.5em;
+}
+
+/* Thread summary */
+  div.thread-summary {
+    /* red rhymes with thread! */
+    margin-bottom: 0.5em;
+  }
+
+  div.thread-summary h2 {
+    font-weight: normal;
+    font-size: medium;
+    display: inline-block;
+    color: blue;
+    margin-right: 0.5em;
+  }
+
+  div.thread-summary span {
+    font-size: small;
+    color: grey;
+  }
+  
+  /* num comments & thread link */
+  div.thread-summary > a        { text-decoration: none; }
+  div.thread-summary > a:hover  { text-decoration: underline; }
+  div.thread-summary > a > span { font-weight: bold; }
+
+/* Page header */
+div.page-header {
+  border-bottom: 1px solid grey;
+  margin-bottom: 0.5em;
+}
+
+  div.page-header img.logo {
+    height: 3em;
+    width:  3em;
+    padding-right: 1em;
+    vertical-align: middle;
+  }
+
+  div.page-header h1 {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+/* Comments */
+div.comment {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+  a.thread-link {
+    display: block;
+    margin-bottom: 1em;
+    font-size: larger;
+    text-decoration: none;
+  }
+
+  div.comment > span.user {
+    font-size: normal;
+    color: blue;
+    display: block;
+    margin-bottom: 0.25em;
+  }
