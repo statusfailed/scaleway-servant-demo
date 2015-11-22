@@ -1,14 +1,13 @@
-# API
+# Scaleway servant demo
+
+A quick overview of the API:
 
 ~~~~{.yaml}
-/
-/thread/:id -- specific thread [^1]
-/thread     -- create a thread (POST)
+GET  /           -- get list of threads
+GET  /thread/:id -- retrieve a thread by ID
+POST /thread/:id -- create a new comment
+POST /thread     -- create a new thread
+GET  /static     -- retrieve static assets
 ~~~~
 
-# Id routes
-
-* Can retrieve elements by Id as HTML fragments
-* Can be used to move rendering to server-side,
-  simply AJAX for text/html to render components
-* Problem: ids? Ids are _full_ URL, so no probs!
+See the `curl` directory for example requests.
