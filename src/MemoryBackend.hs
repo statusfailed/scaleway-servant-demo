@@ -65,7 +65,7 @@ indexServer
   -> IORef Store
   -> EitherT ServantErr IO (Page IndexPage)
 indexServer f r = EitherT . fmap (Right . f) $ threads
-  where threads = fmap M.toList (readIORef r)
+  where threads = fmap (Prelude.reverse . M.toList) (readIORef r)
 
 -- | Serve threads from the global 'Store'
 threadServer :: IORef Store -> Server ThreadAPI
